@@ -1,5 +1,4 @@
 import { Box, Button } from "@mui/material";
-import { useCallback } from "react";
 
 interface PaginationProps {
   meta: { currentPage: number; totalPages: number };
@@ -14,7 +13,7 @@ const Pagination = ({ meta, setPage }: PaginationProps) => {
 
   // Calculate the start and end page numbers dynamically
   let startPage = Math.max(1, currentPage - Math.floor(maxButtons / 2));
-  let endPage = Math.min(totalPages, startPage + maxButtons - 1);
+  const endPage = Math.min(totalPages, startPage + maxButtons - 1);
 
   // Adjust the range if near the start or end
   if (endPage - startPage < maxButtons - 1) {
@@ -26,27 +25,11 @@ const Pagination = ({ meta, setPage }: PaginationProps) => {
     (_, i) => startPage + i
   );
 
-  // ✅ Memoized event handlers using `useCallback`
-  const handlePageChange = useCallback(
-    (page: number) => {
-      if (page !== currentPage) setPage(page);
-    },
-    [currentPage, setPage]
-  );
-
-  const handlePrevious = useCallback(() => {
-    if (currentPage > 1) setPage(currentPage - 1);
-  }, [currentPage, setPage]);
-
-  const handleNext = useCallback(() => {
-    if (currentPage < totalPages) setPage(currentPage + 1);
-  }, [currentPage, totalPages, setPage]);
-
   return (
     <Box display="flex" alignItems="center" gap={1} justifyContent="center">
       <Button
         disabled={currentPage === 1}
-        onClick={handlePrevious}
+        onClick={() => setPage(currentPage - 1)}
         sx={{
           fontSize: "12px",
           backgroundColor: "white",
@@ -60,7 +43,7 @@ const Pagination = ({ meta, setPage }: PaginationProps) => {
       {startPage > 1 && (
         <>
           <Button
-            onClick={() => handlePageChange(1)}
+            onClick={() => setPage(1)}
             size="small"
             sx={{
               minWidth: "30px",
@@ -78,7 +61,7 @@ const Pagination = ({ meta, setPage }: PaginationProps) => {
       {paginationNumbers.map((num) => (
         <Button
           key={num}
-          onClick={() => handlePageChange(num)}
+          onClick={() => setPage(num)}
           variant={num === currentPage ? "contained" : "text"}
           size="small"
           sx={
@@ -107,7 +90,7 @@ const Pagination = ({ meta, setPage }: PaginationProps) => {
         <>
           {endPage < totalPages - 1 && <Box>...</Box>}
           <Button
-            onClick={() => handlePageChange(totalPages)}
+            onClick={() => setPage(totalPages)}
             size="small"
             sx={{
               minWidth: "30px",
@@ -123,7 +106,7 @@ const Pagination = ({ meta, setPage }: PaginationProps) => {
 
       <Button
         disabled={currentPage >= totalPages}
-        onClick={handleNext}
+        onClick={() => setPage(currentPage + 1)}
         sx={{
           fontSize: "12px",
           backgroundColor: "white",

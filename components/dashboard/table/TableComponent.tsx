@@ -4,7 +4,7 @@ import { Box, Paper } from "@mui/material";
 import { useDashboardStore } from "@/store/dashboardStore";
 import { useDebounce } from "@/hooks/useDebounce";
 import useTableConfig from "@/hooks/useTableConfig";
-import { useData } from "@/hooks/useD";
+import { useData } from "@/hooks/useData";
 import TableHeader from "./TableHeader";
 import TableBodyComponent from "./TableBody";
 import Pagination from "./Pagination";
