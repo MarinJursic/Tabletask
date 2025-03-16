@@ -268,7 +268,22 @@ Here are some areas where the project can be further improved:
   - Provide **user-friendly error messages** when API requests fail.
 
 - 🔹 **Enhance UI/UX**
+
   - Improve responsiveness for **larger desktop screens**.
   - Add **animations** for smoother transitions.
+
+- 🔹 **Testing & Code Quality**
+
+  - Add **unit tests** for key components (e.g., Table, Pagination).
+  - Implement **integration tests** for API calls.
+  - Use **Cypress or Playwright** for **end-to-end (E2E) testing**.
+
+- 🔹 **Dashboard Enhancements**
+
+  - Add **sortable table columns** for better data organization.
+
+- 🔹 **Localization & Theming**
+  - Add **multi-language support (i18n)** for wider accessibility.
+  - Implement **dark mode** with **theme switching**.
 
 ---
