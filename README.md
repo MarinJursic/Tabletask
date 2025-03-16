@@ -16,6 +16,7 @@ Supports **dynamic content loading without full page reloads**, **pagination, se
 - [🔐 Authentication](#-authentication)
 - [📌 State Management](#-state-management)
 - [📏 Code Quality & Best Practices](#-code-quality--best-practices)
+- [✅ TODO / Future Improvements](#-todo--future-improvements)
 
 ---
 
