@@ -245,3 +245,29 @@ This project follows a **modular and scalable architecture**, ensuring maintaina
 
 - **Memoization (`useMemo`, `useCallback`)** prevents unnecessary re-renders.
 - **TanStack Query caching** reduces redundant API calls.
+
+---
+
+## ✅ TODO / Future Improvements
+
+Here are some areas where the project can be further improved:
+
+- 🔹 **Avoid using `any` or `unknown` types**
+
+  - Refactor code to use **strict TypeScript types** where applicable.
+  - Ensure **strong type safety** across all components, API responses, and hooks.
+
+- 🔹 **Implement real authentication**
+
+  - Replace simulated login with **JWT-based authentication** or **OAuth (Google, GitHub, etc.)**.
+  - Add route protection using **middleware or server-side validation**.
+
+- 🔹 **Improve Error Handling**
+
+  - Provide **user-friendly error messages** when API requests fail.
+
+- 🔹 **Enhance UI/UX**
+  - Improve responsiveness for **larger desktop screens**.
+  - Add **animations** for smoother transitions.
+
+---
