@@ -92,12 +92,10 @@ This project follows a **modular and scalable architecture**, ensuring maintaina
 ### 🔹 TanStack Query for Data Fetching
 
 - Handles **API fetching, caching, and background data synchronization**.
-- Ensures that **data is always fresh** while reducing API calls.
 
 ### 🔹 Modular Component Design
 
 - **Components are split into reusable units** (e.g., `TableComponent.tsx`, `Pagination.tsx`, `EmptyState.tsx`).
-- UI logic and business logic are separated for **better maintainability**.
 
 ### 🔹 Custom Hooks for Abstraction
 
@@ -157,8 +155,8 @@ This project follows a **modular and scalable architecture**, ensuring maintaina
 ### 🔹 Dynamic Columns Configuration (`useTableConfig.ts`)
 
 - The table **automatically configures columns** based on the selected view.
-- **Content View:** Displays **Name** (with avatar) and other content-specific fields.
-- **Trends View:** Displays **Title, Date, Summary, and a Clickable Link**.
+- **Content View:** Displays **Name**.
+- **Trends View:** Displays **Title, Date, Description, and has clickable rows that redirect to article page in a new tabk**.
 
 ### 🔹 Pagination & Search
 
@@ -194,7 +192,7 @@ This project follows a **modular and scalable architecture**, ensuring maintaina
 ### 🔹 Protected Routes (Future Expansion)
 
 - `ProtectedRoute.tsx` is a placeholder for implementing **route protection**.
-- Currently, **all routes are accessible**, but adding authentication logic here would enforce login before accessing certain pages.
+- Currently, **only dashboard is protected**,
 
 ---
 
@@ -208,7 +206,6 @@ This project follows a **modular and scalable architecture**, ensuring maintaina
 ### 🔹 Dashboard State (`dashboardStore.ts`)
 
 - Manages **selected view**, **pagination settings**, and **search terms**.
-- Ensures that **view switching does not reset pagination or search filters**.
 
 ### 🔹 User State (`userStore.ts`)
 
@@ -251,7 +248,3 @@ This project follows a **modular and scalable architecture**, ensuring maintaina
 - **TanStack Query caching** reduces redundant API calls.
 
 ---
-
-## 📎 License
-
-This project is licensed under the **MIT License** – you are free to use, modify, and distribute it.
