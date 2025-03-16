@@ -16,7 +16,6 @@ Supports **dynamic content loading without full page reloads**, **pagination, se
 - [🔐 Authentication](#-authentication)
 - [📌 State Management](#-state-management)
 - [📏 Code Quality & Best Practices](#-code-quality--best-practices)
-- [📎 License](#-license)
 
 ---
 
@@ -246,5 +245,3 @@ This project follows a **modular and scalable architecture**, ensuring maintaina
 
 - **Memoization (`useMemo`, `useCallback`)** prevents unnecessary re-renders.
 - **TanStack Query caching** reduces redundant API calls.
-
----
