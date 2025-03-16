@@ -5,7 +5,6 @@ export const loginSchema = z.object({
   password: z.string().min(6, "Password must be at least 6 characters"),
 });
 
-// 🔹 Define Pagination Meta Schema
 export const PaginationMetaSchema = z.object({
   currentPage: z.number(),
   itemCount: z.number(),
@@ -14,14 +13,12 @@ export const PaginationMetaSchema = z.object({
   totalPages: z.number(),
 });
 
-// 🔹 Define Content Item Schema (Includes Avatar in Name Column)
 export const ContentItemSchema = z.object({
   id: z.string(),
   name: z.string(),
   avatarUrl: z.string().optional(), // Avatar image for content
 });
 
-// 🔹 Define Trends Item Schema (Formats Data Properly)
 export const TrendsItemSchema = z.object({
   id: z.string(),
   name: z.string(), // Was "title"

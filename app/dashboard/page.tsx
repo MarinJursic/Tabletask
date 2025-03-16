@@ -11,7 +11,6 @@ const DashboardPage: React.FC = () => {
 
   return (
     <Box className="w-full">
-      {/* Dynamic Header */}
       <SubHeader
         title={dashboardConfig.title}
         description={dashboardConfig.description}

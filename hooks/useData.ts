@@ -2,7 +2,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { fetchData, FetchDataParams } from "@/services/apiService";
 import { toast } from "react-hot-toast";
 import { ContentItem, TableType, PaginationMeta } from "../utils/validation";
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 
 export const useData = ({
   type,
