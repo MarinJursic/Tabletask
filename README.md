@@ -8,7 +8,6 @@ Supports **dynamic content loading without full page reloads**, **pagination, se
 ## 📖 Table of Contents
 
 - [🛠️ Tech Stack](#-tech-stack)
-- [📁 Project Structure](#-project-structure)
 - [⚡ Features](#-features)
 - [🚀 Setup Instructions](#-setup-instructions)
 - [🎯 Solution Architecture](#-solution-architecture)
@@ -33,68 +32,6 @@ Supports **dynamic content loading without full page reloads**, **pagination, se
 | **Zod**             | Data validation         |
 | **React-Hot-Toast** | User notifications      |
 | **TypeScript**      | Type safety             |
-
----
-
-## 📁 Project Structure
-
-project-root/ │── app/
-│ ├── layout.tsx - Root layout (Header, Sidebar)
-│ ├── page.tsx - Landing Page
-│ ├── globals.css - Global Styles
-│ │── login/
-│ │ ├── page.tsx - Login Page
-│ │── dashboard/
-│ │ ├── layout.tsx - Dashboard Layout
-│ │ ├── page.tsx - Dashboard Page
-│
-│── components/
-│ ├── ClientToaster.tsx - Notification Component
-│ ├── Input.tsx - Input Component
-│ ├── DropdownMenu.tsx - User Dropdown Menu
-│ ├── Loader.tsx - Loading Spinner
-│ ├── ProtectedRoute.tsx - Auth Wrapper
-│ ├── Providers.tsx - Global Providers
-│ │── Table/
-│ │ ├── TableComponent.tsx - Main Table
-│ │ ├── TableHeader.tsx - Table Header
-│ │ ├── TableBody.tsx - Table Rows
-│ │ ├── RowsPerPage.tsx - Rows Per Page Selector
-│ │ ├── Pagination.tsx - Pagination Component
-│ │ ├── EmptyState.tsx - Empty Table Placeholder
-│ │── Content/
-│ │ ├── page.tsx - Content Page
-│ │ ├── NameColumn.tsx - Image inside table
-│ │── Trends/
-│ │ ├── page.tsx - Trends Page
-│
-│── hooks/
-│ ├── useDashboardConfig.ts - Manages dashboard views dynamically
-│ ├── useData.ts - TanStack Query API Fetching
-│ ├── useDebounce.ts - Search Debouncing
-│ ├── useTableConfig.ts - Table Columns Config
-│
-│── services/
-│ ├── apiService.ts - API Fetching
-│
-│── store/
-│ ├── dashboardStore.ts - Sidebar & View State
-│ ├── userStore.ts - User Data State
-│
-│── styles/
-│ ├── theme.ts - MUI Theme Customization
-│ ├── font.ts - Custom Fonts
-│
-│── utils/
-│ ├── extractUrl.ts - URL Formatter
-│ ├── formatter.ts - General Formatting Functions
-│ ├── validation.ts - Data Validation (Zod)
-│
-│── .gitignore
-│── package.json
-│── README.md
-
----
 
 ### ⚡ Features
 
@@ -201,6 +138,8 @@ This project follows a **modular and scalable architecture**, ensuring maintaina
 - Ensures **clean separation of concerns** between data fetching and UI.
 
 ---
+
+## 📊 Table Component
 
 ### 🔹 Fully Reusable & Modular
 
