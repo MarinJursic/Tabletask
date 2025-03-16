@@ -1,16 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { helveticaNow } from "../styles/fonts";
+import { ThemeProvider } from "@mui/material";
+import muiTheme from "../styles/theme";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
+import { Providers } from "../components/Providers";
+import ClientToaster from "@/components/ClientToaster";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,11 +18,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" className={`${helveticaNow.variable}`}>
+      <body>
+        <Providers>
+          <AppRouterCacheProvider>
+            <ThemeProvider theme={muiTheme}>{children}</ThemeProvider>
+          </AppRouterCacheProvider>
+        </Providers>
+        <ClientToaster /> {/* ✅ Only runs on the client */}
       </body>
     </html>
   );

@@ -1,0 +1,6 @@
+// 🔹 Ensure URL is a valid string (handle multiple comma-separated URLs)
+export const extractValidUrl = (urlString: string | undefined): string => {
+  if (!urlString) return "#"; // Default if no URL provided
+  const urls = urlString.split(","); // Split by comma
+  return urls.length > 0 ? urls[0].trim() : "#"; // Return first valid URL
+};
