@@ -56,8 +56,8 @@ Supports **dynamic content loading without full page reloads**, **pagination, se
 Run the following command to clone the repository and navigate into the project directory:
 
 ```sh
-git clone https://github.com/yourusername/nextjs-dashboard.git
-cd nextjs-dashboard
+git clone https://github.com/MarinJursic/Tabletask.git
+cd Tabletask
 ```
 
 ### 2️⃣ Install Dependencies
