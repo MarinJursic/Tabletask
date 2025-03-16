@@ -33,6 +33,8 @@ Supports **dynamic content loading without full page reloads**, **pagination, se
 | **React-Hot-Toast** | User notifications      |
 | **TypeScript**      | Type safety             |
 
+---
+
 ### ⚡ Features
 
 ✔️ **Login Form** with validation (Email & Password)  
